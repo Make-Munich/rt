@@ -671,6 +671,12 @@ my $build_main_nav = sub {
         path        => '/Tools/MyDay.html',
     );
 
+    $tools->child( user_time =>
+        title       => loc('User Time'),
+        description => loc('See time worked by user'),
+        path        => '/Tools/TimeWorkedReport.html',
+    );
+
     if ( RT->Config->Get('EnableReminders') ) {
         $tools->child( my_reminders =>
             title       => loc('My Reminders'),
